@@ -1,8 +1,8 @@
-import React, { useContext } from 'react';
-import { useNavigate, useRouteError } from 'react-router-dom';
+import React from 'react';
+import { useRouteError } from 'react-router-dom';
 
 const ErrorPage = () => {
-    const navigate = useNavigate()
+
     const error = useRouteError()
 
     return (

@@ -1,24 +1,25 @@
-// import React from 'react';
+import React from 'react';
 
 //CSS Link
 import './Header.css';
 
 // bootstrap main import link
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 // bootstrap components links
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
+import { Container } from 'react-bootstrap';
 
 //assests links
 import logo from '../../../assest/images/Text-FootOScope-logo.png';
-import { Container } from 'react-bootstrap';
+
 
 
 function Header() {
   return (
     <Navbar bg="light" expand="lg">
-
+      <Container>
         <Navbar.Brand href="#home">
           <img style={{width:'12rem'}} src={logo} alt="" />
         </Navbar.Brand>
@@ -32,7 +33,7 @@ function Header() {
             <Nav.Link href="#link">About</Nav.Link>
           </Nav>
         </Navbar.Collapse>
-
+        </Container>
     </Navbar>
   );
 }

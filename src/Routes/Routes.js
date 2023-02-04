@@ -33,7 +33,6 @@ export const routes = createBrowserRouter([
             //         return params.id
             //     }
             // },
-
         ]
 
     }
