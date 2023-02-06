@@ -61,7 +61,7 @@ function Header() {
         <a href="#" onClick={()=>alert("This page is not ready..")} class="text-xl hover:text-black duration-500">ABOUT</a>
       </li>
 
-      <button class="bg-[#E04F5F] text-white duration-500 px-6 py-2 mx-4 hover:bg-red-800 rounded ">
+      <button class="bg-[#e43832] text-white duration-500 px-6 py-2 mx-4 hover:bg-red-800 rounded ">
         <a href="https://www.youtube.com/@FootOscope" target="_blank"> SUBSCRIBE </a>
       </button>
       
