@@ -9,5 +9,6 @@
 
 /.firebase
 /.firebaserc
+/firebase.json
 
 /dist
