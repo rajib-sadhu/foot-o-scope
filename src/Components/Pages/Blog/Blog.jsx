@@ -37,10 +37,10 @@ const Blog = () => {
                       <h2>Posted - <span>{date}, {time}</span> </h2>
                     </div>
                     <div className='space-x-2'>
-                      <a href="" className='px-3 py-1 bg-[#00B5FF] rounded-xl'>
+                      <a href="#" onClick={()=>alert("This page is not ready..")} className='px-3 py-1 bg-[#00B5FF] rounded-xl'>
                           Read More
                       </a>
-                      <a href="" className='px-3 py-1 bg-[#00B5FF] rounded-xl'>
+                      <a href="#" onClick={()=>alert("This page is not ready..")} className='px-3 py-1 bg-[#00B5FF] rounded-xl'>
                           Share <AiOutlineShareAlt className='inline' />
                       </a>
                     </div>

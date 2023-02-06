@@ -40,17 +40,26 @@ export const routes = createBrowserRouter([
             //         return params.id
             //     }
             // },
+            {
+                path: '/admin',
+                element:<AdminLogin/>
+            },
+            {
+                path: '/admin/page',
+                element: <AdminPage/>
+            }
             
         ]
 
     },
-    {
-        path: '/admin',
-        element:<AdminLogin/>
-    },
-    {
-        path: '/admin/page',
-        element: <AdminPage/>
-    }
+
+    // {
+    //     path: '/admin',
+    //     element:<AdminLogin/>
+    // },
+    // {
+    //     path: '/admin/page',
+    //     element: <AdminPage/>
+    // }
 
 ])
