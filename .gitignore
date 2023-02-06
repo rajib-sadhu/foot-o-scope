@@ -7,7 +7,7 @@
 # production
 /build
 
-.firebase
-.firebaserc
+/.firebase
+/.firebaserc
 
 /dist
