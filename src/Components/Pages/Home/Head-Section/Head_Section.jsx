@@ -23,7 +23,7 @@ const Head_Section = () => {
               <a href='https://www.youtube.com/@FootOscope' target='_blank' className='flex items-center'>SUBSCRIBE <ImPlay className='ml-2 text-2xl' /></a>
                </button>
                <button className='inline bg-[#3b5998] hover:bg-[#082462] duration-500 px-4 py-2 rounded-md text-white'> 
-              <a href='https://www.youtube.com/@FootOscope' target='_blank' className='flex items-center'>FOLLOW <AiOutlineWifi className='ml-2 text-2xl follow_btn' /></a>
+              <a href='https://www.facebook.com/footopublic' target='_blank' className='flex items-center'>FOLLOW <AiOutlineWifi className='ml-2 text-2xl follow_btn' /></a>
                </button>
             </div>
 
