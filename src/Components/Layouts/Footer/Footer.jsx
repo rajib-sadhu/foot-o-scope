@@ -24,7 +24,7 @@ const Footer = () => {
         <img src={logo} alt="logo" className='md:h-24 h-16' />
       </div>
 
-      <ul className='flex justify-between md:px-96 px-8'>
+      <ul className='flex justify-between md:px-96 px-0 md:text-md text-sm'>
         <li><a target="_blank" href="https://www.facebook.com/footopublic" className='' >
            <img src={fb} alt="" className='mx-auto mb-2' />
            Facebook
@@ -47,7 +47,7 @@ const Footer = () => {
         </li>
       </ul>
 
-      <p className='text-center'> © Copyright 2023 by Refsnes Data. All Rights Reserved. Foot O Scope is Powered by David RS.  </p>
+      <p className='text-center md:text-lg text-xs'> © Copyright 2023 by Refsnes Data. All Rights Reserved. Foot O Scope is Powered by David RS.  </p>
 
     </footer>
   )

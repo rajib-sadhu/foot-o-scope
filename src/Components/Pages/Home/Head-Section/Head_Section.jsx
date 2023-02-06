@@ -18,11 +18,11 @@ const Head_Section = () => {
 
             <p className='text-slate-700'>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.</p>
 
-            <div className='space-x-5 space-y-2 '>
+            <div className='md:space-x-5 space-x-2  space-y-2 '>
               <button className=' bg-[#e43832] hover:bg-[#750905] duration-500 px-4 py-2 rounded-md text-white'> 
               <a href='https://www.youtube.com/@FootOscope' target='_blank' className='flex items-center'>SUBSCRIBE <ImPlay className='ml-2 text-2xl' /></a>
                </button>
-               <button className='inline bg-[#3b5998] hover:bg-[#082462] duration-500 px-4 py-2 rounded-md text-white'> 
+               <button className=' bg-[#3b5998] hover:bg-[#082462] duration-500 px-4 py-2 rounded-md text-white'> 
               <a href='https://www.facebook.com/footopublic' target='_blank' className='flex items-center'>FOLLOW <AiOutlineWifi className='ml-2 text-2xl follow_btn' /></a>
                </button>
             </div>
