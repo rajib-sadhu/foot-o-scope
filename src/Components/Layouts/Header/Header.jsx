@@ -37,8 +37,8 @@ function Header() {
        <nav class="md:p-10 p-5 bg-[#00B5FF] w-full md:flex md:items-center md:justify-between navbar z-[5] fixed navbar">
     <div class="flex justify-between items-center bg-[#00B5FF]" >
       <span class="">
-        <a href="/home"> 
-        <img class="md:h-10 h-6 inline drop-shadow-xl z-[5]" src={logo} /> </a>
+        <NavLink to="/home"> 
+        <img class="md:h-10 h-6 inline drop-shadow-xl z-[5]" src={logo} /> </NavLink>
       </span>
       <span class="text-3xl cursor-pointer mx-2 md:hidden block z-[5]">
          { menuIcon ? <AiOutlineClose onClick={closeMenu} /> : <GiHamburgerMenu onClick={openkMenu} name="menu" /> }
