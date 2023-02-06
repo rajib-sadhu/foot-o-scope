@@ -34,7 +34,7 @@ function Header() {
 
   return (
     <>
-       <nav class="md:p-10 p-5 bg-[#00B5FF] w-full md:flex md:items-center md:justify-between navbar z-[5] fixed">
+       <nav class="md:p-10 p-5 bg-[#00B5FF] w-full md:flex md:items-center md:justify-between navbar z-[5] fixed navbar">
     <div class="flex justify-between items-center bg-[#00B5FF]" >
       <span class="">
         <a href="/home"> 
@@ -47,19 +47,19 @@ function Header() {
 
     <ul class={`md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-[#00B5FF] w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 ${menuClass1}`}>
       <li class="mx-4 my-6 md:my-0">
-        <NavLink to="/home" class="text-xl hover:text-black duration-500">HOME</NavLink>
+        <NavLink to="/home" class="text-xl text-white hover:text-black duration-500">HOME</NavLink>
       </li>
       <li class="mx-4 my-6 md:my-0">
-        <NavLink to="/blog" class="text-xl hover:text-black duration-500">BLOG'S</NavLink>
+        <NavLink to="/blog" class="text-xl text-white hover:text-black duration-500">BLOG'S</NavLink>
       </li>
       <li class="mx-4 my-6 md:my-0">
-        <NavLink to="#" onClick={()=>alert("This page is not ready..")} class="text-xl hover:text-black duration-500">VIDEOS</NavLink>
+        <NavLink to="#" onClick={()=>alert("This page is not ready..")} class="text-xl text-white hover:text-black duration-500">VIDEOS</NavLink>
       </li>
       <li class="mx-4 my-6 md:my-0">
-        <NavLink to="#" onClick={()=>alert("This page is not ready..")} class="text-xl hover:text-black duration-500">PHOTOS</NavLink>
+        <NavLink to="#" onClick={()=>alert("This page is not ready..")} class="text-xl text-white hover:text-black duration-500">PHOTOS</NavLink>
       </li>
       <li class="mx-4 my-6 md:my-0">
-        <NavLink to="#" onClick={()=>alert("This page is not ready..")} class="text-xl hover:text-black duration-500">ABOUT</NavLink>
+        <NavLink to="#" onClick={()=>alert("This page is not ready..")} class="text-xl text-white hover:text-black duration-500">ABOUT</NavLink>
       </li>
 
       <button class="bg-[#e43832] text-white duration-500 px-6 py-2 mx-4 hover:bg-red-800 rounded ">

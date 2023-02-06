@@ -12,12 +12,12 @@ const Footer = () => {
     <footer className='mx-auto md:py-16 py-10 md:px-44 px-6 bg-black text-white space-y-10'>
       
       <ul className='flex justify-between md:px-64 '>
-        <li className='hover:text-sky-400' > <a href="/home">Home</a> </li>
-        <li className='hover:text-sky-400' > <a href="#" onClick={()=>alert("This Page is not ready.")} >Blogs</a> </li>
-        <li className='hover:text-sky-400' > <a href="#" onClick={()=>alert("This Page is not ready.")} >Videos</a> </li>
-        <li className='hover:text-sky-400' > <a href="#" onClick={()=>alert("This Page is not ready.")} >Photos</a> </li>
-        <li className='hover:text-sky-400' > <a href="#" onClick={()=>alert("This Page is not ready.")} >About</a> </li>
-        <li className='hover:text-sky-400' > <a href="#" onClick={()=>alert("This Page is not ready.")} >Contact</a> </li>
+        <li className='duration-200 text-sky-400 hover:text-sky-200' > <a href="/home">Home</a> </li>
+        <li className='duration-200 text-sky-400 hover:text-sky-200' > <a href="#" onClick={()=>alert("This Page is not ready.")} >Blogs</a> </li>
+        <li className='duration-200 text-sky-400 hover:text-sky-200' > <a href="#" onClick={()=>alert("This Page is not ready.")} >Videos</a> </li>
+        <li className='duration-200 text-sky-400 hover:text-sky-200' > <a href="#" onClick={()=>alert("This Page is not ready.")} >Photos</a> </li>
+        <li className='duration-200 text-sky-400 hover:text-sky-200' > <a href="#" onClick={()=>alert("This Page is not ready.")} >About</a> </li>
+        <li className='duration-200 text-sky-400 hover:text-sky-200' > <a href="#" onClick={()=>alert("This Page is not ready.")} >Contact</a> </li>
       </ul>
 
       <div className='flex justify-center py-5'>
@@ -26,22 +26,22 @@ const Footer = () => {
 
       <ul className='flex justify-between md:px-96 px-0 md:text-md text-sm'>
         <li><a target="_blank" href="https://www.facebook.com/footopublic" className='' >
-           <img src={fb} alt="" className='mx-auto mb-2' />
+           <img src={fb} alt="" className='mx-auto mb-2 duration-300 hover:scale-150' />
            Facebook
         </a>
         </li>
         <li><a target="_blank" href="https://www.instagram.com/antar_bose/" className='' >
-        <img src={insta} alt="" className='mx-auto mb-2' />
+        <img src={insta} alt="" className='mx-auto mb-2 duration-300 hover:scale-150' />
         Instagram
         </a>
         </li>
         <li><a target="_blank" href="https://twitter.com/Im_Abasu" className='' >
-        <img src={tweet} alt="" className='mx-auto mb-2' />
+        <img src={tweet} alt="" className='mx-auto mb-2 duration-300 hover:scale-150' />
         Twitter
         </a>
         </li>
         <li><a target="_blank" href="https://www.youtube.com/@FootOscope" className='' >
-        <img src={yt} alt="" className='mx-auto mb-2' />
+        <img src={yt} alt="" className='mx-auto mb-2 duration-300 hover:scale-150' />
         Youtube
         </a>
         </li>
