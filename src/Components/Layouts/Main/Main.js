@@ -13,7 +13,7 @@ const Main = () => {
     return (
         <div className=''>
             <Header></Header>
-            <div style={outStyle} className='pt-10'>
+            <div style={outStyle} className='md:pt-28 pt-16'>
             <Outlet></Outlet>
             </div>
             <Footer></Footer>

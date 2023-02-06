@@ -9,7 +9,7 @@ import logo from '../../../../assest/images/Icon-FootOScope-logo.svg';
 const Head_Section = () => {
   return (
     <>
-         <header className='w-full bg-[#00B5FF] flex justify-center items-center md:flex-row flex-col-reverse md:gap-56 gap-0 md:p-24 p-10 '>
+         <header className='w-full bg-[#00B5FF] flex justify-center items-center md:flex-row flex-col-reverse md:gap-56 gap-0 md:p-20 md:px-0 px-10 pb-8'>
         <div className='space-y-5 md:w-[30rem]'>
            <div className='space-y-2'>
            <h1 className='text-white md:text-6xl text-4xl font-bold drop-shadow-2xl md:text-left text-center'>FOOT O SCOPE</h1>

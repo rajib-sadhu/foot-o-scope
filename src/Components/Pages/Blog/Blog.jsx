@@ -8,8 +8,8 @@ import { demoData } from './DemoData/demoData';
 const Blog = () => {
   return (
     <>
-    <div className='md:pt-36 pt-10 w-full'>
-        <div className='flex justify-center py-5'>
+    <div className='pt-5 w-full'>
+        <div className='flex justify-center py-5 mx-4'>
         <h1 className='text-4xl font-bold uppercase'>Foot O Scope Blog's</h1>
         </div>
 

@@ -7,6 +7,8 @@ import ErrorPage from "../Components/Pages/ErrorPage/ErrorPage";
 
 import Home from "../Components/Pages/Home/Home";
 import Blog from "../Components/Pages/Blog/Blog";
+import AdminLogin from "../Components/AdminPortal/Admin_Login/AdminLogin";
+import AdminPage from "../Components/AdminPortal/AdminPage/AdminPage";
 
 
 export const routes = createBrowserRouter([
@@ -38,8 +40,17 @@ export const routes = createBrowserRouter([
             //         return params.id
             //     }
             // },
+            
         ]
 
+    },
+    {
+        path: '/admin',
+        element:<AdminLogin/>
+    },
+    {
+        path: '/admin/page',
+        element: <AdminPage/>
     }
 
 ])
