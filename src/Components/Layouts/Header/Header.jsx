@@ -37,7 +37,7 @@ function Header() {
     <div class="flex justify-between items-center" >
       <span class="">
         <a href="/home"> 
-        <img class="md:h-10 h-6 inline" src={logo} /> </a>
+        <img class="md:h-10 h-6 inline drop-shadow-xl" src={logo} /> </a>
       </span>
       <span class="text-3xl cursor-pointer mx-2 md:hidden block z-[5]">
          { menuIcon ? <AiOutlineClose onClick={closeMenu} /> : <GiHamburgerMenu onClick={openkMenu} name="menu" /> }
@@ -49,21 +49,22 @@ function Header() {
         <a href="/home" class="text-xl hover:text-black duration-500">HOME</a>
       </li>
       <li class="mx-4 my-6 md:my-0">
-        <a href="#" class="text-xl hover:text-black duration-500">BLOG'S</a>
+        <a href="#" onClick={()=>alert("This page is not ready..")} class="text-xl hover:text-black duration-500">BLOG'S</a>
       </li>
       <li class="mx-4 my-6 md:my-0">
-        <a href="#" class="text-xl hover:text-black duration-500">VIDEOS</a>
+        <a href="#" onClick={()=>alert("This page is not ready..")} class="text-xl hover:text-black duration-500">VIDEOS</a>
       </li>
       <li class="mx-4 my-6 md:my-0">
-        <a href="#" class="text-xl hover:text-black duration-500">PHOTOS</a>
+        <a href="#" onClick={()=>alert("This page is not ready..")} class="text-xl hover:text-black duration-500">PHOTOS</a>
       </li>
       <li class="mx-4 my-6 md:my-0">
-        <a href="#" class="text-xl hover:text-black duration-500">ABOUT</a>
+        <a href="#" onClick={()=>alert("This page is not ready..")} class="text-xl hover:text-black duration-500">ABOUT</a>
       </li>
 
       <button class="bg-[#E04F5F] text-white duration-500 px-6 py-2 mx-4 hover:bg-red-800 rounded ">
         <a href="https://www.youtube.com/@FootOscope" target="_blank"> SUBSCRIBE </a>
       </button>
+      
 
     </ul>
   </nav>

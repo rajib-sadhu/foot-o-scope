@@ -7,3 +7,9 @@
 /* .heading_tagline{
     letter-spacing: .45rem;
 } */
+
+.follow_btn{
+    
+    font-size: 1.3rem;
+    transform: rotate(55deg);
+}
