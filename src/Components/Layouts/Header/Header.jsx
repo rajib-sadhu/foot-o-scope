@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiOutlineClose } from 'react-icons/ai';
@@ -46,23 +47,23 @@ function Header() {
 
     <ul class={`md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-[#00B5FF] w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 ${menuClass1}`}>
       <li class="mx-4 my-6 md:my-0">
-        <a href="/home" class="text-xl hover:text-black duration-500">HOME</a>
+        <NavLink to="/home" class="text-xl hover:text-black duration-500">HOME</NavLink>
       </li>
       <li class="mx-4 my-6 md:my-0">
-        <a href="#" onClick={()=>alert("This page is not ready..")} class="text-xl hover:text-black duration-500">BLOG'S</a>
+        <NavLink to="/blog" class="text-xl hover:text-black duration-500">BLOG'S</NavLink>
       </li>
       <li class="mx-4 my-6 md:my-0">
-        <a href="#" onClick={()=>alert("This page is not ready..")} class="text-xl hover:text-black duration-500">VIDEOS</a>
+        <NavLink to="#" onClick={()=>alert("This page is not ready..")} class="text-xl hover:text-black duration-500">VIDEOS</NavLink>
       </li>
       <li class="mx-4 my-6 md:my-0">
-        <a href="#" onClick={()=>alert("This page is not ready..")} class="text-xl hover:text-black duration-500">PHOTOS</a>
+        <NavLink to="#" onClick={()=>alert("This page is not ready..")} class="text-xl hover:text-black duration-500">PHOTOS</NavLink>
       </li>
       <li class="mx-4 my-6 md:my-0">
-        <a href="#" onClick={()=>alert("This page is not ready..")} class="text-xl hover:text-black duration-500">ABOUT</a>
+        <NavLink to="#" onClick={()=>alert("This page is not ready..")} class="text-xl hover:text-black duration-500">ABOUT</NavLink>
       </li>
 
       <button class="bg-[#e43832] text-white duration-500 px-6 py-2 mx-4 hover:bg-red-800 rounded ">
-        <a href="https://www.youtube.com/@FootOscope" target="_blank"> SUBSCRIBE </a>
+        <NavLink to="https://www.youtube.com/@FootOscope" target="_blank"> SUBSCRIBE </NavLink>
       </button>
       
 

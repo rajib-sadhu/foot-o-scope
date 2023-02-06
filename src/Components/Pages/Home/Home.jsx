@@ -10,7 +10,7 @@ import './Home.css';
 const Home = () => {
   return (
     <>
-   <div className='md:pt-0 pt-5 min-h-fit'>
+   <div className=''>
 
     <Head_Section/>
 

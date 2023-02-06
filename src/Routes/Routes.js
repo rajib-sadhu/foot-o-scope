@@ -6,6 +6,7 @@ import Main from "../Components/Layouts/Main/Main"
 import ErrorPage from "../Components/Pages/ErrorPage/ErrorPage";
 
 import Home from "../Components/Pages/Home/Home";
+import Blog from "../Components/Pages/Blog/Blog";
 
 
 export const routes = createBrowserRouter([
@@ -21,6 +22,10 @@ export const routes = createBrowserRouter([
             {
                 path: '/home',
                 element: <Home></Home>
+            },
+            {
+                path: '/blog',
+                element: <Blog></Blog>
             },
             // {
             //     path: '/category/:id',
