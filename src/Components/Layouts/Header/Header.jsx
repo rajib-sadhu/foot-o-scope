@@ -22,7 +22,7 @@ function Header() {
 
   const openkMenu =() =>{
     setMenuIcon(true);
-    setmenuClass1("top-[80px] opacity-100");
+    setmenuClass1("top-[50px] opacity-100");
   }
 
   const closeMenu = () =>{
@@ -33,18 +33,18 @@ function Header() {
 
   return (
     <>
-       <nav class="md:p-10 p-5 bg-[#00B5FF] w-full md:flex md:items-center md:justify-between navbar z-10 fixed">
-    <div class="flex justify-between items-center" >
+       <nav class="md:p-10 p-5 bg-[#00B5FF] w-full md:flex md:items-center md:justify-between navbar z-[5] fixed">
+    <div class="flex justify-between items-center bg-[#00B5FF]" >
       <span class="">
         <a href="/home"> 
-        <img class="md:h-10 h-6 inline drop-shadow-xl" src={logo} /> </a>
+        <img class="md:h-10 h-6 inline drop-shadow-xl z-[5]" src={logo} /> </a>
       </span>
       <span class="text-3xl cursor-pointer mx-2 md:hidden block z-[5]">
          { menuIcon ? <AiOutlineClose onClick={closeMenu} /> : <GiHamburgerMenu onClick={openkMenu} name="menu" /> }
       </span>
     </div>
 
-    <ul class={`md:flex md:items-center  md:z-auto md:static absolute bg-[#00B5FF] w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 ${menuClass1}`}>
+    <ul class={`md:flex md:items-center z-[-1] md:z-auto md:static absolute bg-[#00B5FF] w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 ${menuClass1}`}>
       <li class="mx-4 my-6 md:my-0">
         <a href="/home" class="text-xl hover:text-black duration-500">HOME</a>
       </li>
