@@ -9,6 +9,7 @@ import Home from "../Components/Pages/Home/Home";
 import Blog from "../Components/Pages/Blog/Blog";
 import AdminLogin from "../Components/AdminPortal/Admin_Login/AdminLogin";
 import AdminPage from "../Components/AdminPortal/AdminPage/AdminPage";
+import About from "../Components/Pages/About/About";
 
 
 export const routes = createBrowserRouter([
@@ -29,6 +30,11 @@ export const routes = createBrowserRouter([
                 path: '/blog',
                 element: <Blog></Blog>
             },
+            {
+                path: '/about',
+                element: <About></About>
+            },
+            
             // {
             //     path: '/category/:id',
             //     element: <PrivateRoute><CategoryProducts></CategoryProducts></PrivateRoute>,

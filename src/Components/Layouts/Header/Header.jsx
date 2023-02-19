@@ -5,14 +5,12 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 import { AiOutlineClose } from 'react-icons/ai';
 
 
-
 //CSS Link
 import './Header.css';
 
 
 //assests links
 import logo from '../../../assest/images/Text-FootOScope-logo.png';
-
 
 
 function Header() {
@@ -59,7 +57,7 @@ function Header() {
         <NavLink to="#" onClick={()=>alert("This page is not ready..")} class="text-xl text-white hover:text-black duration-500">PHOTOS</NavLink>
       </li>
       <li class="mx-4 my-6 md:my-0">
-        <NavLink to="#" onClick={()=>alert("This page is not ready..")} class="text-xl text-white hover:text-black duration-500">ABOUT</NavLink>
+        <NavLink to="/about" class="text-xl text-white hover:text-black duration-500">ABOUT</NavLink>
       </li>
 
       <button class="bg-[#e43832] text-white duration-500 px-6 py-2 mx-4 hover:bg-red-800 rounded ">
