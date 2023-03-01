@@ -7,7 +7,7 @@ import {pool} from '../database'
 export const viewBlogs = async (req:Request,res:Response):Promise<Response> => {
     try {
         const blogInfo:QueryResult = await pool.query("SELECT * FROM tbl_blog")
-    return res.status(200).json(blogInfo.rows);
+        return res.status(200).json(blogInfo.rows);
     } catch (error) {
         return res.status(500).json({message: "Server Error"})
     }
