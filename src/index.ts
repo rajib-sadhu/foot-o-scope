@@ -1,10 +1,14 @@
-
+require('dotenv').config();
 import express = require("express");
 import cors from 'cors';
 const app = express();
-const PORT:number = 8089;
+const PORT:number = 8089 || process.env.PORT;
 
-import mainRoute from './routes/mainRoute'
+import mainRoute from './routes/mainRoute';
+
+app.get("/",(req,res)=>{
+    res.send('go to the /admin/blog')
+})
 
 app.use(cors());
 app.use(express.json());
