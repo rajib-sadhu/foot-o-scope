@@ -2,7 +2,7 @@ require('dotenv').config();
 import express = require("express");
 import cors from 'cors';
 const app = express();
-const port = process.env.PORT || 8089;
+const PORT:number = 8089 || process.env.PORT;
 
 import mainRoute from './routes/mainRoute';
 
@@ -16,7 +16,7 @@ app.use(express.urlencoded({extended:false}));
 
 app.use(mainRoute);
 
-app.listen(port,()=>{
-    console.log(`App is listening on port ${port}`);
+app.listen(PORT,()=>{
+    console.log(`App is listening on port ${PORT}`);
 
 })
