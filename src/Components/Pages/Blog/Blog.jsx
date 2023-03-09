@@ -32,7 +32,8 @@ const Blog = () => {
       const data = await res.json();
       // console.log(data)
       setData(data);
-      setIsLoading(false)
+      data.sort((a, b) => new Date(b.blog_created_at) - new Date(a.blog_created_at));
+      setIsLoading(false);
 
     }
     catch(error){

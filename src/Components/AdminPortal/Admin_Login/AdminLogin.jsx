@@ -28,7 +28,7 @@ const AdminLogin = () => {
           toast('login successfully');
           setTimeout(()=>{
             return navigate('/admin/page');
-          },3000)
+          },2000)
         }
         else{
           toast('Invalid Email and Password');
