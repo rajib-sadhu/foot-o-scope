@@ -1,11 +1,53 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import {AiOutlineShareAlt} from 'react-icons/ai';
 
-import { demoData } from './DemoData/demoData';
+// import { demoData } from './DemoData/demoData';
+
+
 
 
 const Blog = () => {
+
+  const [demoData, setData] = useState([]);
+
+  // let isLoading = true;
+  const API = 'https://quaint-ray-gear.cyclic.app/admin/blog';
+
+
+  const fetchApiData = async (url) =>{
+
+    try{
+
+      const res = await fetch(url);
+
+      const data = await res.json();
+
+      console.log(data)
+
+      setData(data);
+
+      // isLoading = false;
+
+    }
+    catch(error){
+      console.error();
+      console.log(error);
+    }
+  }
+
+  useEffect(()=>{
+
+    fetchApiData(API);
+
+  },[]);
+
+  // if(isLoading){
+  //   return <> <h1 className='mt-10 text-center'>Loading.....</h1> </>
+  // }
+
+
+
   return (
     <>
     <div className='pt-5 w-full'>
@@ -17,24 +59,24 @@ const Blog = () => {
 
           {
             demoData.map((val)=>{
-              const {id, title, desc,image , date, time} = val;
-              return <article key={id} className = "p-5 md:flex bg-slate-300 justify-between items-center md:h-60 md:w-3/4 w-11/12 gap-4" >
+              const {blog_id, blog_title, blog_desc, blog_created_at} = val;
+              return <article key={blog_id} className = "p-5 md:flex bg-slate-300 justify-between items-center md:h-60 md:w-3/4 w-11/12 gap-4" >
                 <div className='md:w-1/4 md:block flex justify-center  py-5'>
-                  <img src={image} alt="" className='h-52' />
+                  <img src="" alt="" className='h-52' />
                 </div>
 
                 <div className='md:w-3/4 py-5'>
                   
                   <div className='w-full h-40 space-y-4'>
-                  <h1 className='text-2xl font-medium h-10 whitespace-nowrap text-ellipsis overflow-hidden'> {title} </h1>
+                  <h1 className='text-2xl font-medium h-10 whitespace-nowrap text-ellipsis overflow-hidden'> {blog_title} </h1>
                   <div className='overflow-scroll overflow-x-hidden h-[6rem]'>
-                  <p className=''>{desc}</p>
+                  <p className=''>{blog_desc}</p>
                   </div>
                   </div>
                   
                   <div className='mt-5 md:flex justify-between md:space-x-0 space-y-4'>
                     <div className='text-slate-700 font-semibold'>
-                      <h2>Posted - <span>{date}, {time}</span> </h2>
+                      <h2>Posted - <span>{blog_created_at}, {}</span> </h2>
                     </div>
                     <div className='space-x-2'>
                       <a href="#" onClick={()=>alert("This page is not ready..")} className='px-3 py-1 bg-[#00B5FF] rounded-xl'>

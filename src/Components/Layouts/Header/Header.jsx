@@ -59,6 +59,9 @@ function Header() {
       <li class="mx-4 my-6 md:my-0">
         <NavLink to="/about" class="text-xl text-white hover:text-black duration-500">ABOUT</NavLink>
       </li>
+      <li class="mx-4 my-6 md:my-0">
+        <NavLink to="/admin/page/blog" class="text-xl text-white hover:text-black duration-500">Admin Blog</NavLink>
+      </li>
 
       <button class="bg-[#e43832] text-white duration-500 px-6 py-2 mx-4 hover:bg-red-800 rounded ">
         <NavLink to="https://www.youtube.com/@FootOscope" target="_blank"> SUBSCRIBE </NavLink>

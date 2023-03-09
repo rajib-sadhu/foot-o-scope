@@ -1,5 +1,14 @@
 
 
+### Live Hosting
+Live Site - [https://footoscope.web.app](Firebase Site)
+
+### Server Site
+RestApi - [https://quaint-ray-gear.cyclic.app/](API site cyclic)
+Github - [https://github.com/rajib-sadhu/foot-o-scope.git](Back End)
+
+
+
 
 ## Available Scripts
 
