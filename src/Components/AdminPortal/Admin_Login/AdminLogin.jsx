@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {useNavigate } from 'react-router-dom';
+import {useNavigate, NavLink } from 'react-router-dom';
 
 // import toastify
 import { ToastContainer, toast } from 'react-toastify';
@@ -41,7 +41,9 @@ const AdminLogin = () => {
   return (
     <div className='w-full h-screen py-20 bg-[#00B5FF]'>
       <section className='mb-10'>
+        <NavLink to="/">
         <img src={window.location.origin + '/images/Text-FootOScope-logo.png'} className='md:w-2/5 w-3/4 mx-auto' alt="" />
+        </NavLink>
       </section>
 
         <section className='w-full h-auto px-2'>

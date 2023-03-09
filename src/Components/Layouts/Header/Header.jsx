@@ -61,7 +61,7 @@ function Header() {
         <NavLink to="/about" className="text-xl text-white hover:text-black duration-500">ABOUT</NavLink>
       </li>
       <li className="mx-4 my-6 md:my-0">
-        <NavLink to="/admin" className="text-xl text-white hover:text-black duration-500">Admin</NavLink>
+        <NavLink to="/admin" className="text-xl text-white hover:text-black duration-500">ADMIN</NavLink>
       </li>
 
       <button className="bg-[#e43832] text-white duration-500 px-6 py-2 mx-4 hover:bg-red-800 rounded ">
