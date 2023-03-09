@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 // React Icons
 import {AiOutlineShareAlt} from 'react-icons/ai';
+import {GrFormView} from 'react-icons/gr';
 
 // Import Modal
 import BlogModal from './Modal/Modal';
@@ -94,9 +95,9 @@ const Blog = () => {
                 <div className='md:w-3/4 py-5'>
                   
                   <div className='w-full h-40 space-y-4'>
-                  <h1 className='text-2xl font-medium h-10 whitespace-nowrap text-ellipsis overflow-hidden'> {blog_title} </h1>
-                  <div className='overflow-scroll overflow-x-hidden h-[6rem]'>
-                  <p className=''>{blog_desc}</p>
+                  <h1 className='text-2xl font-medium h-10 '> {blog_title} </h1>
+                  <div className=' h-[6rem]'>
+                  <p className=''>{blog_desc.length>500? `${blog_desc.slice(0,500)}...`: blog_desc }</p>
                   </div>
                   </div>
                   
@@ -109,10 +110,10 @@ const Blog = () => {
                         handleShow();
                         isSetModalValue(val);
                       }}>
-                          Read More
+                          View <GrFormView className='inline text-2xl' />
                       </button>
                       <button onClick={()=>alert("This page is not ready..")} className='px-3 py-1 bg-[#00B5FF] rounded-xl'>
-                          Share <AiOutlineShareAlt className='inline' />
+                          Share <AiOutlineShareAlt className='inline text-2xl' />
                       </button>
                     </div>
                   </div>

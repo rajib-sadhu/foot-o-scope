@@ -23,7 +23,7 @@ export default function BlogModal(props) {
 
 
   return (
-    <div className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex items-center justify-center">
+    <div className="fixed inset-0 bg-black bg-opacity-25 backdrop-blur-sm flex items-center justify-center" onDoubleClick={props.handleClose}>
       <div className="bg-white p-5 rounded w-9/12 space-y-3">
         <h1 className="font-semibold  text-xl text-gray-700">
           {blog_title}
