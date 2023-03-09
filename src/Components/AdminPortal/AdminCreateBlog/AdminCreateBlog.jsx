@@ -72,4 +72,4 @@ const AdminCreateBlog = () => {
   )
 }
 
-export default AdminCreateBlog
+export default AdminCreateBlog;
