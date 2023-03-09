@@ -17,7 +17,7 @@ const AdminPage = () => {
 
         <section className='h-auto px-2'>
             
-                <div className='mx-auto flex-col flex justify-center w-[50rem] items-center md:h-96 p-5 bg-slate-300'>
+                <div className='mx-auto flex-col flex justify-center md:w-[50rem] items-center md:h-96 p-5 bg-slate-300'>
                     
                 <h1 className='md:text-3xl text-2xl font-semibold'>ADMIN PAGE</h1>
 

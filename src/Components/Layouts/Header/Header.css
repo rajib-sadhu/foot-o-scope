@@ -1,7 +1,7 @@
 
 .navbar{
     color: white;
-    font-weight: 00;
+    z-index: 9;
 }
 
 

@@ -85,20 +85,20 @@ const Blog = () => {
               
               // convert Date in local format
               const d = new Date(blog_created_at);
-              const date = `${(formatAMPM(d))}, ${d.toLocaleDateString()}`;
+              const date = `${(formatAMPM(d))}, ${d.toLocaleDateString('en-GB')}`;
 
 
-              return <article key={blog_id} className = "p-5 md:flex bg-slate-300 justify-between items-center md:h-60 md:w-3/4 w-11/12 gap-4" >
+              return <article key={blog_id} className = " md:flex bg-slate-300 justify-between items-center md:h-60 md:w-3/4 w-11/12 gap-4" >
                 <div className='md:w-1/4 md:block flex justify-center  py-5'>
-                  <img src="" alt="" className='h-52' />
+                  <img src="https://i.ibb.co/swtG2vY/FOOT-O-SCOPE-PRESENT-1.png" alt="" className='h-52' />
                 </div>
 
                 <div className='md:w-3/4 py-5'>
                   
-                  <div className='w-full h-40 space-y-4'>
-                  <h1 className='text-2xl font-medium h-10 '> {blog_title} </h1>
-                  <div className=' h-[6rem]'>
-                  <p className=''>{blog_desc.length>500? `${blog_desc.slice(0,500)}...`: blog_desc }</p>
+                  <div className='w-full md:h-40 space-y-4'>
+                  <h1 className='text-2xl font-medium md:h-10 '> {blog_title} </h1>
+                  <div className=' md:h-[6rem]'>
+                  <p className='overflow-hidden'>{blog_desc.length>500? `${blog_desc.slice(0,500)}...`: blog_desc }</p>
                   </div>
                   </div>
                   

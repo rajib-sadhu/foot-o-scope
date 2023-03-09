@@ -100,7 +100,8 @@ const AdminCreateBlog = () => {
                                <div className='grid md:grid-cols-2 grid-cols-1 gap-5'>
                                <div className='space-y-2'>
                                     <input type="file" name="" id="" />
-                                    <img className='w-full h-56 border-1 border-black border' src="" alt="upload image show there" />
+                                    <img className='w-full h-48 border-1 border-black border' src="" alt="upload image show there" />
+                                    <p>Tag Name: </p>
                                     <input className='text-md w-full p-2' type="text" value={tagName} onChange={e=>setTagName(e.target.value)} placeholder="Write tag names" />
                                 </div>
                                 
