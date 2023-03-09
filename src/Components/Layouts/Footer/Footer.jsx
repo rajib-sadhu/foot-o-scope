@@ -13,7 +13,7 @@ const Footer = () => {
       
       <ul className='flex justify-between md:px-64 '>
         <li className='duration-200 text-sky-400 hover:text-sky-200' > <a href="/home">Home</a> </li>
-        <li className='duration-200 text-sky-400 hover:text-sky-200' > <a href="#" onClick={()=>alert("This Page is not ready.")} >Blogs</a> </li>
+        <li className='duration-200 text-sky-400 hover:text-sky-200' > <a href="/blog" >Blogs</a> </li>
         <li className='duration-200 text-sky-400 hover:text-sky-200' > <a href="#" onClick={()=>alert("This Page is not ready.")} >Videos</a> </li>
         <li className='duration-200 text-sky-400 hover:text-sky-200' > <a href="#" onClick={()=>alert("This Page is not ready.")} >Photos</a> </li>
         <li className='duration-200 text-sky-400 hover:text-sky-200' > <a href="#" onClick={()=>alert("This Page is not ready.")} >About</a> </li>
