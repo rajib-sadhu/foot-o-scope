@@ -9,6 +9,8 @@ import {AiOutlineShareAlt} from 'react-icons/ai';
 
 const Blog = () => {
 
+  const [isLoading, setIsLoading ] =useState(true);
+
   const [demoData, setData] = useState([]);
 
   // let isLoading = true;
@@ -20,14 +22,10 @@ const Blog = () => {
     try{
 
       const res = await fetch(url);
-
       const data = await res.json();
-
-      console.log(data)
-
+      // console.log(data)
       setData(data);
-
-      // isLoading = false;
+      setIsLoading(false)
 
     }
     catch(error){
@@ -42,9 +40,22 @@ const Blog = () => {
 
   },[]);
 
-  // if(isLoading){
-  //   return <> <h1 className='mt-10 text-center'>Loading.....</h1> </>
-  // }
+  // API Loading Animation
+  if(isLoading){
+    return <> <h1 className='mt-10 text-center'>Loading.....</h1> </>
+  }
+
+  // Convert Time in AM PM format
+  function formatAMPM(date) {
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var ampm = hours >= 12 ? 'pm' : 'am';
+    hours = hours % 12;
+    hours = hours ? hours : 12; // the hour '0' should be '12'
+    minutes = minutes < 10 ? '0'+minutes : minutes;
+    var strTime = hours + ':' + minutes + ' ' + ampm;
+    return strTime;
+  }
 
 
 
@@ -60,6 +71,12 @@ const Blog = () => {
           {
             demoData.map((val)=>{
               const {blog_id, blog_title, blog_desc, blog_created_at} = val;
+
+              // convert Date in local format
+              const d = new Date(blog_created_at);
+              const date = `${(formatAMPM(d))}, ${d.toLocaleDateString()}`;
+
+
               return <article key={blog_id} className = "p-5 md:flex bg-slate-300 justify-between items-center md:h-60 md:w-3/4 w-11/12 gap-4" >
                 <div className='md:w-1/4 md:block flex justify-center  py-5'>
                   <img src="" alt="" className='h-52' />
@@ -75,8 +92,8 @@ const Blog = () => {
                   </div>
                   
                   <div className='mt-5 md:flex justify-between md:space-x-0 space-y-4'>
-                    <div className='text-slate-700 font-semibold'>
-                      <h2>Posted - <span>{blog_created_at}, {}</span> </h2>
+                    <div className='text-slate-500'>
+                      <h2>Posted - <span>{date}</span> </h2>
                     </div>
                     <div className='space-x-2'>
                       <a href="#" onClick={()=>alert("This page is not ready..")} className='px-3 py-1 bg-[#00B5FF] rounded-xl'>
