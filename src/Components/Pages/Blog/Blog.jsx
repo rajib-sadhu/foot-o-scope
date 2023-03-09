@@ -1,13 +1,19 @@
 import React, { useEffect, useState } from 'react';
 
+// React Icons
 import {AiOutlineShareAlt} from 'react-icons/ai';
 
-// import { demoData } from './DemoData/demoData';
-
+// Import Modal
+import BlogModal from './Modal/Modal';
 
 
 
 const Blog = () => {
+
+  const [setModalValue, isSetModalValue ] =useState();
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
 
   const [isLoading, setIsLoading ] =useState(true);
 
@@ -67,11 +73,14 @@ const Blog = () => {
         </div>
 
       <section className='my-5 flex flex-col justify-center items-center gap-5 md:m-5'>
+      {/* Show Modal */}
+      {show && <BlogModal handleClose={handleClose} modalValue={setModalValue} />}
 
           {
             demoData.map((val)=>{
               const {blog_id, blog_title, blog_desc, blog_created_at} = val;
-
+             
+              
               // convert Date in local format
               const d = new Date(blog_created_at);
               const date = `${(formatAMPM(d))}, ${d.toLocaleDateString()}`;
@@ -96,12 +105,15 @@ const Blog = () => {
                       <h2>Posted - <span>{date}</span> </h2>
                     </div>
                     <div className='space-x-2'>
-                      <a href="#" onClick={()=>alert("This page is not ready..")} className='px-3 py-1 bg-[#00B5FF] rounded-xl'>
+                      <button className='px-3 py-1 bg-[#00B5FF] rounded-xl' variant="primary" onClick={()=>{
+                        handleShow();
+                        isSetModalValue(val);
+                      }}>
                           Read More
-                      </a>
-                      <a href="#" onClick={()=>alert("This page is not ready..")} className='px-3 py-1 bg-[#00B5FF] rounded-xl'>
+                      </button>
+                      <button onClick={()=>alert("This page is not ready..")} className='px-3 py-1 bg-[#00B5FF] rounded-xl'>
                           Share <AiOutlineShareAlt className='inline' />
-                      </a>
+                      </button>
                     </div>
                   </div>
 
@@ -113,6 +125,7 @@ const Blog = () => {
 
       </section>
 
+          
 
     </div> 
     </>

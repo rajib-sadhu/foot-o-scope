@@ -1,11 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
+import {useNavigate } from 'react-router-dom'
 
 
 const AdminLogin = () => {
 
+  const navigate = useNavigate();
+
+  // for get email and password value
+  const [admin, setAdmin] = useState({
+    email:'admin',
+    password:'2017',
+    errorMsg: false
+  })
+
+  // Form Submit
     const handleSubmit = (event)=>{
         event.preventDefault();
-        alert()
+        const adminEmail = admin.email;
+        const adminPassword = admin.password;
+
+        if(adminEmail == 'admin' && adminPassword=='2017'){
+          alert('login successfully');
+          return(
+            navigate('/admin/page')
+          )
+        }
+        else{
+          alert('Invalid Email and Password')
+        }
+        setAdmin({
+          email:'',
+          password:''
+        })
     }
 
   return (
@@ -20,14 +46,14 @@ const AdminLogin = () => {
                     
                 <h1 className='md:text-3xl text-2xl font-semibold'>ADMIN PORTAL LOGIN</h1>
                     <form className='w-full flex items-center flex-col mt-5 space-y-5' onSubmit={handleSubmit} action="">
-                    <input className='w-2/3 px-2 py-3' type="text" placeholder='Enter Username' />
-                    <input className='w-2/3 px-2 py-3' type="password" placeholder='Enter Password' />
+                    <input className='w-2/3 px-2 py-3' onChange={e=>setAdmin({email:e.target.value})} value={admin.email} type="text" placeholder='Enter Username' />
+                    <input className='w-2/3 px-2 py-3' onChange={e=>setAdmin({password:e.target.value})} value={admin.password} type="password" placeholder='Enter Password' />
                     <span className='text-red-700 w-full text-right pr-5'>
-                        <a href="#" className=''>Forgot password?</a>
+                        <a onClick={()=>alert('username is admin and password is 2017')} href="#" className=''>Forgot password?</a>
                     </span>
-                    <div className='bg-[#00B5FF] hover:bg-[#0b6386] py-2 px-10 rounded-3xl'>
-                    <button type='submit' className=' text-white' >Login</button>
-                    </div>
+
+                    <button style={{backgroundColor:'#00B5FF'}} type='submit' className='hover:bg-[#0b6386] py-2 px-10 rounded-3xl text-white' >Login</button>
+
                     </form>
                 </div>
 
