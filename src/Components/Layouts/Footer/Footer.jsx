@@ -18,6 +18,7 @@ const Footer = () => {
         <li className='duration-200 text-sky-400 hover:text-sky-200' > <a href="#" onClick={()=>alert("This Page is not ready.")} >Photos</a> </li>
         <li className='duration-200 text-sky-400 hover:text-sky-200' > <a href="#" onClick={()=>alert("This Page is not ready.")} >About</a> </li>
         <li className='duration-200 text-sky-400 hover:text-sky-200' > <a href="#" onClick={()=>alert("This Page is not ready.")} >Contact</a> </li>
+        <li className='duration-200 text-sky-400 hover:text-sky-200' > <a href="/admin" >Admin</a> </li>
       </ul>
 
       <div className='flex justify-center py-5'>
