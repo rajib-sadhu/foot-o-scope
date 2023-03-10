@@ -87,7 +87,7 @@ const Blog = () => {
               </div>
           </div>
           </div>
-          <div className="grid grid-cols-12 sm:px-5 gap-x-8 gap-y-16">
+          <div className="grid grid-cols-12 sm:px-5 md:gap-x-8 gap-y-16">
           {
         blogData.map((val)=>{
                       const {blog_id, blog_title, blog_desc, blog_created_at} = val;

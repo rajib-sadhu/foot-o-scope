@@ -11,7 +11,7 @@ const Main = () => {
             <div className='z-50'>
             <Header></Header>
             </div>
-            <div className='h-screen'>
+            <div className='h-min-screen'>
             <Outlet></Outlet>
             </div>
             <Footer></Footer>
