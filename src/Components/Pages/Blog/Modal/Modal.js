@@ -14,7 +14,7 @@ export default function BlogModal(props) {
         return strTime;
     }
 
-    console.log(props.modalValue)
+    // console.log(props.modalValue)
     const {blog_id, blog_title, blog_desc,blog_tag_name, blog_created_at} = props.modalValue;
 
     const d = new Date(blog_created_at);
@@ -28,8 +28,10 @@ export default function BlogModal(props) {
       <div className="bg-white p-5 rounded w-9/12 space-y-3 h-3/4">
         <div className="h-50">
             <img className="md:h-52 mx-auto" src="https://i.ibb.co/swtG2vY/FOOT-O-SCOPE-PRESENT-1.png" />
+            <p className={`${blog_tag_name? `bg-[#b7f3ff]` : `bg-white h-[1.4rem]` } text-[.6rem] text-black pt-1.5 pr-3 pb-1.5 pl-3
+                  rounded rounded-5 uppercase inline-block `}>{blog_tag_name}</p>
         </div>
-       <div className="px-10 space-y-3 md:h-56 overflow-hidden overflow-scroll overflow-x-hidden">
+       <div className="md:px-10 space-y-3 md:h-56 h-96 overflow-hidden overflow-scroll overflow-x-hidden">
        <h1 className="font-semibold  text-xl text-gray-700">
           {blog_title}
         </h1>
@@ -40,13 +42,11 @@ export default function BlogModal(props) {
         </div>
        </div>
        {/* Footer */}
-       <div className="flex justify-between px-5">
+       <div className="flex justify-between md:px-5">
        <div className=' text-slate-500 text-sm space-y-2'>
               <h2>Posted - <span>{date}</span> </h2>
-              <p className={`${blog_tag_name? `bg-[#b7f3ff]` : `bg-white h-[1.4rem]` } text-[.6rem] text-black pt-1.5 pr-3 pb-1.5 pl-3
-                  rounded rounded-5 uppercase inline-block `}>{blog_tag_name}</p>
         </div>
-        <div className="flex items-end">
+        <div className="">
           <button onClick={props.handleClose} className=" px-5 py-2 bg-gray-700 text-white bg-red-700 rounded">
             Close
           </button>
