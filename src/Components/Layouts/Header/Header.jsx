@@ -33,7 +33,7 @@ function Header() {
 
   return (
     <>
-       <nav className="md:p-10 p-5 bg-[#00B5FF] w-full md:flex md:items-center md:justify-between navbar">
+       <nav className="md:p-10 p-5 bg-[#00B5FF] w-full md:flex md:items-center md:justify-between navbar z-10">
     <div className="flex justify-between items-center bg-[#00B5FF]" >
       <span className="">
         <NavLink to="/home"> 
@@ -44,7 +44,7 @@ function Header() {
       </span>
     </div>
 
-    <ul className={`md:flex md:items-center md:z-auto md:static absolute bg-[#00B5FF] w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 ${menuClass1}`}>
+    <ul className={`md:flex md:items-center md:z-auto md:static bg-[#00B5FF] w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 ${menuClass1}`}>
       <li className="mx-4 my-6 md:my-0">
         <NavLink to="/home" className="text-xl text-white hover:text-black duration-500">HOME</NavLink>
       </li>

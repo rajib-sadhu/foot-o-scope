@@ -58,19 +58,6 @@ const AdminCreateBlog = () => {
               pending: 'Promise is pending',
             }
         );
-
-        // const res = await fetch('https://quaint-ray-gear.cyclic.app/admin/blog', {
-        //     method: 'POST',
-        //     body: JSON.stringify({
-        //         blogTitle: blog_title,
-        //         blogDesc: blog_desc,
-        //         blogTagName: tagName
-        //     }),
-        //     headers: {
-        //         'Content-type': 'application/json; charset=UTF-8',
-        //     },
-        //     });
-
             const data = await res.json();
             toast.success('Posting Successfully');
 

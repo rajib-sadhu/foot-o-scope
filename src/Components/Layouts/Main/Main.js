@@ -8,7 +8,9 @@ const Main = () => {
 
     return (
         <div className=''>
+            <div className='z-50'>
             <Header></Header>
+            </div>
             <div className='h-min'>
             <Outlet></Outlet>
             </div>
