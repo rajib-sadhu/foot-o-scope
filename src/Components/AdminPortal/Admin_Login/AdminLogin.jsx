@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import {useNavigate, NavLink } from 'react-router-dom';
 
 // import toastify
-import { ToastContainer, toast } from 'react-toastify';
+import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -26,9 +26,7 @@ const AdminLogin = () => {
 
         if(adminEmail == 'admin' && adminPassword=='2017'){
           toast('login successfully');
-          setTimeout(()=>{
             return navigate('/admin/page');
-          },2000)
         }
         else{
           toast('Invalid Email and Password');
@@ -64,18 +62,6 @@ const AdminLogin = () => {
                 </div>
 
         </section>
-        <ToastContainer
-          position="top-center"
-          autoClose={3000}
-          hideProgressBar={false}
-          newestOnTop={false}
-          closeOnClick
-          rtl={false}
-          pauseOnFocusLoss
-          draggable
-          pauseOnHover
-          theme="light"
-          />
 
     </div>
   )

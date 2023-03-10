@@ -2,19 +2,13 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 
 // Toastify
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
+import { toast } from 'react-toastify';
+
 
 // Default Image
 const defaultImage = `https://media.istockphoto.com/id/1341046662/vector/picture-profile-icon-human-or-people-sign-and-symbol-for-template-design.jpg?s=612x612&w=0&k=20&c=A7z3OK0fElK3tFntKObma-3a7PyO8_2xxW0jtmjzT78=`;
 
 const AdminCreateBlog = () => {
-
-
-    // toastify
-    const [toasty, setToast] = useState(false);
-
-
 
 
     const [blog_title, setTitleChange] = useState("");
@@ -33,44 +27,59 @@ const AdminCreateBlog = () => {
         setDescChange(value);
     }
 
+
+    // Submit Blog data
     const handleSubmit = async (event) =>{
 
         event.preventDefault();
-
-        const id = toast.loading("Please wait...");
-
-        setToast(true);
-
-
+        // toast.promise('Posting....')
 
         if(blog_title==='' || blog_desc===''){
-            toast.update(id, { render: "Please fill title and descriptions", type: "error", isLoading: false });
-            setTimeout(()=> setToast(false) ,3000)
+            toast.error("Please fill Title and Description field");
         }
         else{
 
        try{
-        const res = await fetch('https://quaint-ray-gear.cyclic.app/admin/blog', {
-            method: 'POST',
-            body: JSON.stringify({
-                blogTitle: blog_title,
-                blogDesc: blog_desc,
-                blogTagName: tagName
-            }),
-            headers: {
-                'Content-type': 'application/json; charset=UTF-8',
-            },
-            });
-            const data = await res.json();
 
-            toast.update(id, { render: "Post successfully", type: "success", isLoading: false });
+        const res = await toast.promise(
+            fetch("https://quaint-ray-gear.cyclic.app/admin/blog", {
+                method: 'POST',
+                body: JSON.stringify({
+                    blogTitle: blog_title,
+                    blogDesc: blog_desc,
+                    blogTagName: tagName
+                }),
+                headers: {
+                    'Content-type': 'application/json; charset=UTF-8',
+                },
+                }
+            ),
+            {
+              pending: 'Promise is pending',
+            }
+        );
+
+        // const res = await fetch('https://quaint-ray-gear.cyclic.app/admin/blog', {
+        //     method: 'POST',
+        //     body: JSON.stringify({
+        //         blogTitle: blog_title,
+        //         blogDesc: blog_desc,
+        //         blogTagName: tagName
+        //     }),
+        //     headers: {
+        //         'Content-type': 'application/json; charset=UTF-8',
+        //     },
+        //     });
+
+            const data = await res.json();
+            toast.success('Posting Successfully');
+
             console.log(data);
-            setTimeout(()=> setToast(false) ,5000)
+
        }
        catch(err){
         console.error('ERR: '+ err);
-        toast.update(id, { render: "Posting Failed", type: "error", isLoading: false });
-        setTimeout(()=> setToast(false) ,5000)
+        toast.error('Opps! Posting Error')
        }
 
        setTitleChange('');
@@ -114,14 +123,8 @@ const AdminCreateBlog = () => {
                                 <div className='mt-5 text-center'>
                                 <button type='submit' className='bg-[#00B5FF] hover:bg-[#0b6386] py-2 px-10 rounded-3xl text-white' >Submit</button>
                                 </div>
-                        
                   </form>
-
-
       </section>
-
-     {toasty? <ToastContainer/> : '' }
-
   </div>
   )
 }
