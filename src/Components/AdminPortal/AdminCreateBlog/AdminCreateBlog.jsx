@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 // Toastify
 import { toast } from 'react-toastify';
+import BlogData from './BlogData';
 
 
 // Default Image
@@ -15,20 +16,12 @@ const AdminCreateBlog = () => {
     const [blog_desc, setDescChange] = useState("");
     const [tagName, setTagName] = useState( 'footoscope');
 
+    // show blog data
+    const [showData, setShowData] =useState(false);
 
 
-    const titleOnChange = (event) =>{
-        const value = event.target.value;
-        setTitleChange(value);
-    }
 
-    const descOnChange = (event) =>{
-        const value = event.target.value;
-        setDescChange(value);
-    }
-
-
-    // Submit Blog data
+    // Submit then create a Blog data
     const handleSubmit = async (event) =>{
 
         event.preventDefault();
@@ -72,9 +65,6 @@ const AdminCreateBlog = () => {
        setTitleChange('');
        setDescChange('');
         }
-
-
-        
     }
 
 
@@ -88,7 +78,6 @@ const AdminCreateBlog = () => {
 
       <section className='mx-auto flex-col flex justify-center items-center w-9/12 p-5 bg-slate-300'>
           
-                  
               <h1 className='md:text-3xl text-2xl font-semibold'>ADMIN BLOG POST</h1>
 
                     <form className='mt-10' onSubmit={handleSubmit} action="">
@@ -102,8 +91,8 @@ const AdminCreateBlog = () => {
                                 </div>
                                 
                                 <div className='text-right space-y-2'>
-                                <input value={blog_title} onChange={titleOnChange} className='w-full px-2 py-3' type="text" placeholder='Enter title' />
-                                <textarea value={blog_desc} onChange={descOnChange} className='w-full p-3' cols="30" rows="10" placeholder='Write description there....'></textarea>
+                                <input value={blog_title} onChange={e=>setTitleChange(e.target.value)} className='w-full px-2 py-3' type="text" placeholder='Enter title' />
+                                <textarea value={blog_desc} onChange={e=>setDescChange(e.target.value)} className='w-full p-3' cols="30" rows="10" placeholder='Write description there....'></textarea>
                                 </div>
                                </div>
 
@@ -112,6 +101,16 @@ const AdminCreateBlog = () => {
                                 </div>
                   </form>
       </section>
+
+        {/* Show Blog Data  */}
+        <section className='mt-10 flex justify-center'>
+        <button className="bg-[#1a6f90] hover:bg-[#1c1d1e] flex items-center leading-none text-xs font-medium text-gray-50 pt-1.5 pr-3 pb-1.5 pl-3 rounded-full uppercase" onClick={()=>setShowData(!showData)} > {!showData?'Show Blog Data':'Hide Blog Data'} </button>
+        </section>
+        <section className='mt-10 px-10'>
+        {showData && <BlogData/> }
+        </section>
+        
+
   </div>
   )
 }

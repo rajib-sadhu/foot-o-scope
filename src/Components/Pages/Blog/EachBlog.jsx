@@ -41,7 +41,7 @@ const EachBlog = (props) => {
             {/* Show Modal */}
             {show && <BlogModal handleClose={handleClose} modalValue={setModalValue} />}
 
-        <div className="flex flex-col items-start justify-between col-span-12 space-y-3 sm:col-span-6 xl:col-span-4 p-5">
+        <div className="bg-slate-100 rounded-xl flex flex-col items-start justify-between col-span-12 space-y-3 sm:col-span-6 xl:col-span-4 p-5">
               <div className='space-y-3'>
               <img
                   src="https://i.ibb.co/swtG2vY/FOOT-O-SCOPE-PRESENT-1.png" className="object-cover w-full mb-2 overflow-hidden rounded-lg shadow-sm max-h-56 btn-"/>
