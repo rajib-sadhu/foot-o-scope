@@ -28,7 +28,7 @@ export default function BlogModal(props) {
       <div className="bg-white p-5 rounded w-9/12 space-y-3 h-3/4 flex flex-col justify-between">
         <div className="h-50">
             <img className="md:h-52 mx-auto" src="https://i.ibb.co/swtG2vY/FOOT-O-SCOPE-PRESENT-1.png" />
-            <p className={`${blog_tag_name? `bg-[#b7f3ff]` : `bg-white h-[1.4rem]` } text-[.6rem] text-black pt-1.5 pr-3 pb-1.5 pl-3
+            <p className={`${blog_tag_name? `bg-[#b7f3ff]` : `bg-white h-[1.4rem]` } text-[.6rem] text-black md:ml-5 pt-1.5 pr-3 pb-1.5 pl-3
                   rounded rounded-5 uppercase inline-block `}>{blog_tag_name}</p>
         </div>
        <div className="md:px-10 space-y-3 md:h-56 h-full overflow-hidden overflow-scroll overflow-x-hidden">
