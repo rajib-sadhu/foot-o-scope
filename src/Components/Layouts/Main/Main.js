@@ -11,7 +11,7 @@ const Main = () => {
             <div className='z-50'>
             <Header></Header>
             </div>
-            <div className='h-min-screen'>
+            <div className='min-h-[35rem]'>
             <Outlet></Outlet>
             </div>
             <Footer></Footer>

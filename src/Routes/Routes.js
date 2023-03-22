@@ -11,6 +11,7 @@ import AdminLogin from "../Components/AdminPortal/Admin_Login/AdminLogin";
 import AdminPage from "../Components/AdminPortal/AdminPage/AdminPage";
 import About from "../Components/Pages/About/About";
 import AdminCreateBlog from "../Components/AdminPortal/AdminCreateBlog/AdminCreateBlog";
+import Beta from "../Components/Pages/Beta/Beta";
 
 
 export const routes = createBrowserRouter([
@@ -34,6 +35,10 @@ export const routes = createBrowserRouter([
             {
                 path: '/about',
                 element: <About></About>
+            },
+            {
+                path: '/beta',
+                element: <Beta/>
             },
             
             // {

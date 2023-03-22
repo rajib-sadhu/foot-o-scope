@@ -1,0 +1,8 @@
+.movie{
+    margin: 0 auto;
+    background-color: aqua;
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    background-position: top ;
+    /* background: linear-gradient(#e66465, #9198e5); */
+}

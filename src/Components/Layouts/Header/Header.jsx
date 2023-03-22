@@ -33,7 +33,7 @@ function Header() {
 
   return (
     <>
-       <nav className="md:p-10 p-5 bg-[#00B5FF] w-full md:flex md:items-center md:justify-between navbar z-10">
+       <nav className="md:p-3 p-1 bg-[#00B5FF] w-full md:flex md:items-center md:justify-between navbar z-10">
     <div className="flex justify-between items-center bg-[#00B5FF]" >
       <span className="">
         <NavLink to="/home"> 
@@ -46,25 +46,25 @@ function Header() {
 
     <ul className={`md:flex md:items-center md:z-auto md:static ${!menuIcon?'absolute':''} bg-[#00B5FF] w-full left-0 md:w-auto md:py-0 py-4 md:pl-0 pl-7 md:opacity-100 opacity-0 top-[-400px] transition-all ease-in duration-500 ${menuClass1}`}>
       <li className="mx-4 my-6 md:my-0">
-        <NavLink to="/home" onClick={closeMenu} className="text-xl text-white hover:text-black duration-500">HOME</NavLink>
+        <NavLink to="/home" onClick={closeMenu} className=" text-white hover:text-black duration-500">HOME</NavLink>
       </li>
       <li className="mx-4 my-6 md:my-0">
-        <NavLink to="/blog" onClick={closeMenu} className="text-xl text-white hover:text-black duration-500">BLOG'S</NavLink>
+        <NavLink to="/blog" onClick={closeMenu} className=" text-white hover:text-black duration-500">BLOG'S</NavLink>
       </li>
       <li className="mx-4 my-6 md:my-0">
-        <NavLink to="#" onClick={()=>alert("This page is not ready..")} className="text-xl text-white hover:text-black duration-500">VIDEOS</NavLink>
+        <NavLink to="#" onClick={()=>alert("This page is not ready..")} className=" text-white hover:text-black duration-500">VIDEOS</NavLink>
       </li>
       <li className="mx-4 my-6 md:my-0">
-        <NavLink to="#" onClick={()=>alert("This page is not ready..")} className="text-xl text-white hover:text-black duration-500">PHOTOS</NavLink>
+        <NavLink to="#" onClick={()=>alert("This page is not ready..")} className=" text-white hover:text-black duration-500">PHOTOS</NavLink>
       </li>
       <li className="mx-4 my-6 md:my-0">
-        <NavLink to="/about" onClick={closeMenu} className="text-xl text-white hover:text-black duration-500">ABOUT</NavLink>
+        <NavLink to="/about" onClick={closeMenu} className=" text-white hover:text-black duration-500">ABOUT</NavLink>
       </li>
       <li className="mx-4 my-6 md:my-0">
-        <NavLink to="/admin" onClick={closeMenu} className="text-xl text-white hover:text-black duration-500">ADMIN</NavLink>
+        <NavLink to="/admin" onClick={closeMenu} className=" text-white hover:text-black duration-500">ADMIN</NavLink>
       </li>
 
-      <button className="bg-[#e43832] text-white duration-500 px-6 py-2 mx-4 hover:bg-red-800 rounded ">
+      <button className="bg-[#e43832] text-sm text-white duration-500 px-4 py-1 mx-4 hover:bg-red-800 rounded ">
         <NavLink to="https://www.youtube.com/@FootOscope" target="_blank"> SUBSCRIBE </NavLink>
       </button>
       
